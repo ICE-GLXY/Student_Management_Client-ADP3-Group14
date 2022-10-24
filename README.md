@@ -1,1 +1,1 @@
-# -Student_Management_Client-ADP3-Group14
+# Student_Management_Client-ADP3-Group14
