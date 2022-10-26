@@ -16,6 +16,7 @@ import static za.ac.cput.requests.userRequest.*;
 public class userTest extends JFrame  {
     public userTest() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -432,9 +433,10 @@ public class userTest extends JFrame  {
         }
     }
 
-    private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_homeBtnActionPerformed
+    private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {
+        dispose();
+        new Menu().setVisible(true);
+    }
 
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {
         System.exit(0);
