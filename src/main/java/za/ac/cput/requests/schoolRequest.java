@@ -74,7 +74,7 @@ public class schoolRequest
         List<school>schoolList = new ArrayList<>();
         try
         {
-            final String getURL = "http://localhost:8080/Student_Management-ADP3-Group14/school/readAllSchool";
+            final String getURL = "http://localhost:8080/Student_Management-ADP3-Group14/school/readAllSchools";
             String responseBody = get(getURL);
             JSONArray schools = new JSONArray(responseBody);
             
