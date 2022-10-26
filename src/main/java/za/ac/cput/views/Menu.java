@@ -88,6 +88,11 @@ public class Menu extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 153, 153));
         jButton5.setText("Login");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(153, 153, 255));
         jButton6.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
@@ -192,9 +197,23 @@ public class Menu extends javax.swing.JFrame {
         new userTest().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    //register form
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        registerForm rs = new registerForm();
+           rs.setTitle("Register Form");
+           rs.setVisible(true);
+           this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    //loginform
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        loginForm lf = new loginForm();
+           lf.setTitle("Login Form");
+           lf.setVisible(true);
+           this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,17 +251,17 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1; //Student
-    private javax.swing.JButton jButton10; //Teacher
-    private javax.swing.JButton jButton11; //Resources
-    private javax.swing.JButton jButton2; //School
-    private javax.swing.JButton jButton3; //Parent
-    private javax.swing.JButton jButton4; //UserDatabse
-    private javax.swing.JButton jButton5; //Login
-    private javax.swing.JButton jButton6; //Register
-    private javax.swing.JButton jButton7; //Subject
-    private javax.swing.JButton jButton8; //Mark
-    private javax.swing.JButton jButton9; //Grade
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
