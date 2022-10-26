@@ -15,6 +15,7 @@ import static za.ac.cput.requests.parentRequest.*;
 public class ParentTest extends JFrame  {
     public ParentTest() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -490,6 +491,8 @@ public class ParentTest extends JFrame  {
 
     private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
         // TODO add your handling code here:
+        dispose();
+        new Menu().setVisible(true);
     }//GEN-LAST:event_homeBtnActionPerformed
 
     private void nameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTxtActionPerformed

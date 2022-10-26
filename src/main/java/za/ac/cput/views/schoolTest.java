@@ -16,6 +16,7 @@ import static za.ac.cput.requests.schoolRequest.*;
 public class schoolTest extends JFrame  {
     public schoolTest() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -383,7 +384,8 @@ public class schoolTest extends JFrame  {
     }
 
     private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+        new Menu().setVisible(true);
     }//GEN-LAST:event_homeBtnActionPerformed
 
     

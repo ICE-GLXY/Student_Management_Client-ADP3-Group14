@@ -219,10 +219,9 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordTxtActionPerformed
 
-    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-        // TODO add your handling code here:
+    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {
         signIn();
-    }//GEN-LAST:event_loginBtnActionPerformed
+    }
 
     /**
      * @param args the command line arguments
