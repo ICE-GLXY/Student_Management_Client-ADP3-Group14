@@ -14,8 +14,21 @@ import static za.ac.cput.requests.schoolRequest.*;
  * @author Abdul Aleem Chilwan
  */
 public class schoolTest extends JFrame  {
+    Login login = new Login() ;
+
+    private void auth()
+    {
+        if (login.isAdmin() == false){
+            SaveBtn.setEnabled(false);
+            schoolTxt.setEnabled(false);
+            schoolNameTxt.setEnabled(false);
+            schoolIdTxt.setEnabled(false);
+            deleteBtn.setEnabled(false);
+        }
+    }
     public schoolTest() {
         initComponents();
+        auth();
         this.setLocationRelativeTo(null);
     }
 

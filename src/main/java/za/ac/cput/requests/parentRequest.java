@@ -93,16 +93,12 @@ public class parentRequest
         return parentList;
     }
     
-    public static void save_parent(String parentCode, String name, String email,
-                                   String mobileNo, String address, String username,
-                                   String password)
+    public static void save_parent(String parentCode, String name, String email, String mobileNo, String address, String username, String password)
     {
         try
         {
             final String postURL = "http://localhost:8080/Student_Management-ADP3-Group14/parent/save_parent";
-            parent parent = parentFactory.createParent(parentCode, name, email,
-                    mobileNo, address, username,
-                    password);
+            parent parent = parentFactory.createParent(parentCode, name, email, mobileNo, address, username, password);
             Gson post = new Gson();
             String jsonString = post.toJson(parent);
             String c = post(postURL, jsonString);
@@ -114,5 +110,9 @@ public class parentRequest
         catch (Exception e){
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
+    }
+
+    public static void main(String[] args) {
+        save_parent("56","SD","SD","SD","SA","SD","SD");
     }
 }

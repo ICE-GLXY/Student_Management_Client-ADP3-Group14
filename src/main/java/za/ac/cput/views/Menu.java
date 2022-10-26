@@ -18,6 +18,12 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        jButton10.setEnabled(false);
+        jButton11.setEnabled(false);
+        jButton8.setEnabled(false);
+        jButton7.setEnabled(false);
+        jButton1.setEnabled(false);
+        jButton9.setEnabled(false);
         this.setLocationRelativeTo(null);
     }
 
@@ -116,6 +122,11 @@ public class Menu extends javax.swing.JFrame {
         jButton11.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(0, 153, 153));
         jButton11.setText("Resources");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,6 +201,10 @@ public class Menu extends javax.swing.JFrame {
         dispose();
         new schoolTest().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
