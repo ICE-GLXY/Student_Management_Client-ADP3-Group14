@@ -14,8 +14,26 @@ import static za.ac.cput.requests.userRequest.*;
  * @author Taariq Phillips
  */
 public class userTest extends JFrame  {
+
+    Login login = new Login() ;
+
+    private void auth()
+    {
+        if (login.isAdmin() == false){
+            SaveBtn.setEnabled(false);
+            gradeCBox.setEnabled(false);
+            passwordTxtField.setEnabled(false);
+            confirmationTxtField.setEnabled(false);
+            userTypeCBox.setEnabled(false);
+            emailDltTxt.setEnabled(false);
+            deleteBtn.setEnabled(false);
+            emailTxtField.setEnabled(false);
+        }
+    }
+
     public userTest() {
         initComponents();
+        auth();
         this.setLocationRelativeTo(null);
     }
 
