@@ -13,27 +13,9 @@ import static za.ac.cput.requests.userRequest.*;
  *
  * @author Taariq Phillips
  */
-public class userTest extends JFrame  {
-
-    Login login = new Login() ;
-
-    private void auth()
-    {
-        if (login.isAdmin() == false){
-            SaveBtn.setEnabled(false);
-            gradeCBox.setEnabled(false);
-            passwordTxtField.setEnabled(false);
-            confirmationTxtField.setEnabled(false);
-            userTypeCBox.setEnabled(false);
-            emailDltTxt.setEnabled(false);
-            deleteBtn.setEnabled(false);
-            emailTxtField.setEnabled(false);
-        }
-    }
-
-    public userTest() {
+public class resources extends JFrame  {
+    public resources() {
         initComponents();
-        auth();
         this.setLocationRelativeTo(null);
     }
 
@@ -59,20 +41,16 @@ public class userTest extends JFrame  {
         jTable2 = new javax.swing.JTable();
         updateTblBtn = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        emailLbl = new javax.swing.JLabel();
-        gradeLbl = new javax.swing.JLabel();
-        passwordLbl = new javax.swing.JLabel();
-        confirmLbl = new javax.swing.JLabel();
-        userLbl = new javax.swing.JLabel();
-        emailTxtField = new javax.swing.JTextField();
-        passwordTxtField = new javax.swing.JTextField();
-        confirmationTxtField = new javax.swing.JTextField();
-        gradeCBox = new javax.swing.JComboBox<>();
-        userTypeCBox = new javax.swing.JComboBox<>();
+        jLabelTextBook = new javax.swing.JLabel();
+        jlableExercise = new javax.swing.JLabel();
+        jLableExercise = new javax.swing.JLabel();
+        textFieldBookName = new javax.swing.JTextField();
+        textFieldExercise = new javax.swing.JTextField();
         SaveBtn = new javax.swing.JButton();
+        jTextFieldSlideShow = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
-        emailDltLbl = new javax.swing.JLabel();
-        emailDltTxt = new javax.swing.JTextField();
+        jLableItemName = new javax.swing.JLabel();
+        jTextFieldItemName = new javax.swing.JTextField();
         deleteBtn = new javax.swing.JButton();
         deleteHeadLbl = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -98,7 +76,7 @@ public class userTest extends JFrame  {
 
         headingLbl.setBackground(new java.awt.Color(204, 204, 204));
         headingLbl.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        headingLbl.setText("User Database");
+        headingLbl.setText("Resources ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -106,7 +84,7 @@ public class userTest extends JFrame  {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(headingLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(headingLbl)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -126,31 +104,31 @@ public class userTest extends JFrame  {
         jTable2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Email Address", "Grade", "Password ", "Password Confrimation", "User Type"
+                "Text Books", "Exercise", "Slide Shows"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -181,12 +159,13 @@ public class userTest extends JFrame  {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 259, Short.MAX_VALUE)
+                        .addComponent(updateTblBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 252, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(265, Short.MAX_VALUE)
-                .addComponent(updateTblBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(258, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,37 +179,23 @@ public class userTest extends JFrame  {
 
         jTabbedPane1.addTab("TABLE", jPanel3);
 
-        emailLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        emailLbl.setText("Email Address :");
+        jLabelTextBook.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabelTextBook.setText("Text book name:");
 
-        gradeLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        gradeLbl.setText("Grade : ");
+        jlableExercise.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jlableExercise.setText("Slide shows");
 
-        passwordLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        passwordLbl.setText("Password :");
+        jLableExercise.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLableExercise.setText("Exercise ");
 
-        confirmLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        confirmLbl.setText("Password Confirmation :");
-
-        userLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        userLbl.setText("User Type :");
-
-        emailTxtField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        emailTxtField.addActionListener(new java.awt.event.ActionListener() {
+        textFieldBookName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        textFieldBookName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtFieldActionPerformed(evt);
+                textFieldBookNameActionPerformed(evt);
             }
         });
 
-        passwordTxtField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        confirmationTxtField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        gradeCBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        gradeCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
-
-        userTypeCBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        userTypeCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Parent", "Student" }));
+        textFieldExercise.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
         SaveBtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         SaveBtn.setText("Save");
@@ -247,57 +212,45 @@ public class userTest extends JFrame  {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap(52, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(userLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(emailLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(gradeLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(passwordLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(confirmLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabelTextBook, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                    .addComponent(jlableExercise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLableExercise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(emailTxtField)
-                    .addComponent(passwordTxtField)
-                    .addComponent(confirmationTxtField)
-                    .addComponent(gradeCBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(userTypeCBox, 0, 349, Short.MAX_VALUE)
+                    .addComponent(textFieldBookName, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
+                    .addComponent(textFieldExercise)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(SaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73)))
+                        .addGap(73, 73, 73))
+                    .addComponent(jTextFieldSlideShow))
                 .addContainerGap(115, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(emailTxtField, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                    .addComponent(emailLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(gradeLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(gradeCBox, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passwordLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(passwordTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jLabelTextBook, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldBookName, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(confirmationTxtField, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(confirmLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(userLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(userTypeCBox, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
-                .addGap(18, 18, Short.MAX_VALUE)
+                    .addComponent(jlableExercise, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(jTextFieldSlideShow))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLableExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldExercise, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addComponent(SaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("USERS", jPanel5);
+        jTabbedPane1.addTab("ADD RESOURCES", jPanel5);
 
-        emailDltLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        emailDltLbl.setText("EmailAddress :");
+        jLableItemName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLableItemName.setText("Item name:");
 
-        emailDltTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jTextFieldItemName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
         deleteBtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         deleteBtn.setText("Delete");
@@ -308,7 +261,7 @@ public class userTest extends JFrame  {
         });
 
         deleteHeadLbl.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        deleteHeadLbl.setText("Delete A User");
+        deleteHeadLbl.setText("Delete A Item");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -316,10 +269,10 @@ public class userTest extends JFrame  {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap(95, Short.MAX_VALUE)
-                .addComponent(emailDltLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLableItemName, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(emailDltTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldItemName, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deleteHeadLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(120, Short.MAX_VALUE))
@@ -331,8 +284,8 @@ public class userTest extends JFrame  {
                 .addComponent(deleteHeadLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(emailDltTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                    .addComponent(emailDltLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jTextFieldItemName, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                    .addComponent(jLableItemName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(52, Short.MAX_VALUE))
@@ -440,14 +393,14 @@ public class userTest extends JFrame  {
 
 
     }
-    private void emailTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtFieldActionPerformed
+    private void textFieldBookNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldBookNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtFieldActionPerformed
+    }//GEN-LAST:event_textFieldBookNameActionPerformed
 
     private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {
         if (evt.getSource() == SaveBtn)
         {
-            save_user(emailTxtField.getText(), passwordTxtField.getText(), confirmationTxtField.getText(), Integer.parseInt(gradeCBox.getSelectedItem().toString()), userTypeCBox.getSelectedItem().toString());
+            //save_user(textFieldBookName.getText(), textFieldExercise.getText(), confirmationTxtField.getText(), Integer.parseInt(gradeCBox.getSelectedItem().toString()), userTypeCBox.getSelectedItem().toString());
         }
     }
 
@@ -467,7 +420,7 @@ public class userTest extends JFrame  {
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {
         if (evt.getSource() == deleteBtn)
             {
-                deleteUser(emailDltTxt.getText());
+                deleteUser(jTextFieldItemName.getText());
             }
     }
 
@@ -488,40 +441,36 @@ public class userTest extends JFrame  {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(userTest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(resources.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(userTest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(resources.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(userTest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(resources.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(userTest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(resources.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new userTest().setVisible(true);
+                new resources().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton SaveBtn;
-    private javax.swing.JLabel confirmLbl;
-    private javax.swing.JTextField confirmationTxtField;
     private javax.swing.JButton deleteBtn;
     private javax.swing.JLabel deleteHeadLbl;
-    private javax.swing.JLabel emailDltLbl;
-    private javax.swing.JTextField emailDltTxt;
-    private javax.swing.JLabel emailLbl;
-    private javax.swing.JTextField emailTxtField;
     private javax.swing.JButton exitBtn;
-    private javax.swing.JComboBox<String> gradeCBox;
-    private javax.swing.JLabel gradeLbl;
     private javax.swing.JLabel headingLbl;
     private javax.swing.JButton homeBtn;
     private javax.swing.JColorChooser jColorChooser1;
+    private javax.swing.JLabel jLabelTextBook;
+    private javax.swing.JLabel jLableExercise;
+    private javax.swing.JLabel jLableItemName;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -533,11 +482,12 @@ public class userTest extends JFrame  {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JLabel passwordLbl;
-    private javax.swing.JTextField passwordTxtField;
+    private javax.swing.JTextField jTextFieldItemName;
+    private javax.swing.JTextField jTextFieldSlideShow;
+    private javax.swing.JLabel jlableExercise;
+    private javax.swing.JTextField textFieldBookName;
+    private javax.swing.JTextField textFieldExercise;
     private javax.swing.JButton updateTblBtn;
-    private javax.swing.JLabel userLbl;
-    private javax.swing.JComboBox<String> userTypeCBox;
     // End of variables declaration//GEN-END:variables
 
     

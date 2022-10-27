@@ -60,7 +60,7 @@ public class parentRequest
     {
         try
         {
-            final String deleteURL = "http://localhost:8080//Student_Management-ADP3-Group14/parent/deleteParent/" + parentCode;
+            final String deleteURL = "http://localhost:8080/Student_Management-ADP3-Group14/parent/deleteParent/" + parentCode;
             delete(deleteURL);
             String responseBody = get(deleteURL);
             JOptionPane.showMessageDialog(null, "successfully Deleted");
@@ -74,7 +74,7 @@ public class parentRequest
         List<parent>parentList = new ArrayList<>();
         try
         {
-            final String getURL = "http://localhost:8080/Student_Management-ADP3-Group14/parent/readAllParent";
+            final String getURL = "http://localhost:8080/Student_Management-ADP3-Group14/parent/readAllParents";
             String responseBody = get(getURL);
             JSONArray parents = new JSONArray(responseBody);
             
